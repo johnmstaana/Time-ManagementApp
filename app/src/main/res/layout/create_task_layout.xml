@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="1">
+
+    <TextView
+        android:id="@+id/category_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Category"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/task_input"
+        android:layout_alignStart="@+id/reminder_text"/>
+
+    <EditText
+        android:id="@+id/task_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/activity_text"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:hint="Input Task Name"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:text="Name"/>
+
+    <EditText
+        android:id="@+id/category_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/task_input"
+        android:layout_alignTop="@+id/category_text"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Category Name"/>
+
+    <TextView
+        android:id="@+id/reminder_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reminder"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/category_input"
+        android:layout_alignStart="@+id/Note"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="39dp"/>
+
+    <TextView
+        android:id="@+id/Note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note#"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/note_input"/>
+
+    <EditText
+        android:id="@+id/note_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Button"
+        android:layout_alignStart="@+id/Note"
+        android:layout_alignEnd="@+id/note_input"/>
+
+    <EditText
+        android:id="@+id/reminder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:layout_alignTop="@+id/reminder_text"
+        android:layout_alignStart="@+id/category_input"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/reminder_view"
+        android:layout_alignStart="@+id/reminder_view"
+        android:layout_below="@+id/reminder_view"/>
+
+</RelativeLayout>
